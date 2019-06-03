@@ -29,8 +29,11 @@ Acceptance Criteria:
 
 ![img](https://i.imgur.com/sXnZ9z2.jpg)
 
-![img](https://imgur.com/sXnZ9z2)
+![img](https://imgur.com/sXnZ9z2.jpg)
 
+# ERD
+
+![img](https://i.imgur.com/KIs0qvR.jpg)
 
 
 # Github Project
