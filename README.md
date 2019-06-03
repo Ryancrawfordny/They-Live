@@ -40,5 +40,8 @@ Acceptance Criteria:
 
 https://github.com/users/Ryancrawfordny/projects/1
 
+# Dataset
+
+https://github.com/timothyrenner/bigfoot-dash-app/blob/master/data/bfro_report_locations.csv
 
 
