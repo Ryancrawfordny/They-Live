@@ -18,12 +18,16 @@ Why:
  His biggest hobby is hunting for bigfoot and he wants to expand his community.
 
 Details:
-  Our app maps oout locations opf bigfoot sightings across the US and has a message board where bigfooters can connect and chat with others in the community.
+  Our app maps out locations of bigfoot sightings across the US and has a message board where bigfooters can connect and chat with others in the community.
 
 Acceptance Criteria:
   When the sites loads, the user will see a detailed map of the USA with the locations of bigfoot renderd for them to checkout.
   The user will have an option to create a username to gain access to the message boards.
   The user will be able to create a new post, edit their posts, delete their posts and comment on other posts.
+  
+# Github Project
+
+https://github.com/users/Ryancrawfordny/projects/1
 
 
 
