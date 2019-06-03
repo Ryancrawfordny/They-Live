@@ -13,6 +13,7 @@ class PostsController < ApplicationController
        rescue Exception
          render json: { message: "there was some other error" }, status: :internal_server_error
        end
+    end
 
        def create
         post = Post.find params[:post_id]

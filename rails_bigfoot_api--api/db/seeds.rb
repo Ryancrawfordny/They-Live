@@ -44,12 +44,19 @@ sightings.each do |sighting_data|
     Sighting.create(sighting_data)
   end
 
-  user1 = User.create({
-      username: "john"
-  })
+  
+user1 = User.create({
+    username: "john"
+})
 
-  post1 = Post.create({
-      post: "Did you see bigfoot?"
-  })
+post1 = Post.create({
+    post: "Did you see bigfoot?",
+    user_id: 1
+})
+
+comment1 = Comment.create({
+    comment: "I saw bigfoot!",
+    user_id: 2
+})
 
   
