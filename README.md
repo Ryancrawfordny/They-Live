@@ -25,6 +25,14 @@ Acceptance Criteria:
   The user will have an option to create a username to gain access to the message boards.
   The user will be able to create a new post, edit their posts, delete their posts and comment on other posts.
   
+# Wireframes 
+
+!(image)[https://imgur.com/a/vsvBjmd]
+
+! (image) [https://imgur.com/sXnZ9z2]
+
+
+
 # Github Project
 
 https://github.com/users/Ryancrawfordny/projects/1
