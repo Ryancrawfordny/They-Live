@@ -27,9 +27,7 @@ Acceptance Criteria:
   
 # Wireframes 
 
-![Imgur Image] (https://imgur.com/sXnZ9z2)
-
-![Imgur Image] (https://imgur.com/sXnZ9z2)
+![img]https://i.imgur.com/sXnZ9z2.jpg[/img]
 
 
 
