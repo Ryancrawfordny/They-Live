@@ -44,4 +44,31 @@ https://github.com/users/Ryancrawfordny/projects/1
 
 https://github.com/timothyrenner/bigfoot-dash-app/blob/master/data/bfro_report_locations.csv
 
+# Timeline
+
+Monday
+
+-Set up rails backend 
+-Have my seeds file completed
+-Start on CRUD functionality
+
+Tuesday
+
+-Complete CRUD for message board
+-Connect backend to React
+-Work on mapping my data
+
+Wednesday
+
+Work out any bugs
+-Make sure message board is functional
+
+Thursday
+-Finish MVP
+-Work on styling
+
+Friday
+
+-Responsive design
+-Finish design
 
