@@ -5,3 +5,40 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+
+
+
+
+sightings = [
+    {report: 673,
+    info: `Campers' encounter just after dark in the Wrangell
+    - St. Elias National Park and Preserve`,
+    lat: 61.5,
+    long: -142.9 },
+     
+     {report: 211,
+    info: `Daylight sighting by a hunter east of Alberta Hwy 22,
+     near Hwy 532`,
+    lat: 50.4023,
+    long: -114.3957}
+
+    {report: 726,
+    info: `A hitchhiker reports seeing a bigfoot in 
+    a forested area off U.S. 441`,
+    lat: 29.0599,
+    long: -82.05835}
+
+    {report: 47378,
+    info: `Memory told of a close nighttime encounter while
+     hunting rabbits in a rural backyard near Palm Harbor`,
+    lat: 28.09538,
+    long: -82.74918}
+
+    {report: 577,
+    info: `Man has repeated visits at family farm`,
+    lat: 34.80405,
+    long: -87.50905}
+]
