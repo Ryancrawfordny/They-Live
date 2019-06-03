@@ -1,17 +1,13 @@
 # They-Live
-
-# Bigfoot Sightings
-
-# Technologies Used : 
-  HTML - CSS - ReactJS - Ruby on Rails
-
-# About: 
+# About 
   Do you believe in Bigfoot? Search this site to see if there were any Bogfoot sightings near you and chat with other bigfooters.  Tell your story on our message boards.
   
-# Scope:
+# Scope
   This app is call They Live and will show bigfooters where and when bigfoot sightings have happened. Bigfooters will also be able to leave messages on our board to tell their stories and comment on others.
+Technologies Used : 
+  HTML - CSS - ReactJS - Ruby on Rails
   
-# User Story -
+# User Story
 Who:
   Harry Henderson
 
