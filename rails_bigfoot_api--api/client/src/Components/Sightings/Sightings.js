@@ -19,7 +19,7 @@ class Sightings extends Component {
   };
 
   render() {
-      console.log(this.state.apiData)
+      
     // const { info } =this.props;
     // const displayName = `${info.name}`
     return (

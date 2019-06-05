@@ -2,18 +2,20 @@ import React, { Component } from "react";
 import Comments from "../../Components/Comments/Comments";
 // import Home from "./Comments/Home/Home"
 import { Link, Route } from "react-router-dom";
-import Sightings from "../Sightings/Sightings";
+import './Header.css'
+
 
 class Header extends Component {
   render() {
     return (
       <div>
-        <nav>
-          <li>
+        <header>
+          <nav>
             <Link to="/posts">Message Board</Link>
             <Link to="/sightings">Sightings</Link>
-          </li>
-        </nav>
+            <Link to="/home">Home</Link>
+          </nav>
+        </header>
       </div>
     );
   }

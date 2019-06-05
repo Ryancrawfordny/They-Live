@@ -42,7 +42,7 @@ class SightingsMap extends Component {
     _renderPopup() {
         const {popupInfo} = this.state;
 
-        console.log(popupInfo)
+        
 
         const lng = popupInfo.lat
         const lat = popupInfo.long
@@ -63,7 +63,7 @@ class SightingsMap extends Component {
 
     render() {
         const sightings = this.props.sightings;
-        console.log(this.props)
+        
         const { viewport } = this.state;
 
         return (

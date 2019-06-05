@@ -1,3 +1,8 @@
+header {
+    background-color: black;
+    color: white;
+  }
+
 nav {
     position: fixed
 }

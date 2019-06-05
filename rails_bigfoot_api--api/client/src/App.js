@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import Sightings from "./Components/Sightings/Sightings";
@@ -18,25 +18,25 @@ class App extends Component {
           {this.props.children}
         </div>
         {/*Nav*/}
-        <switch>
+        <Switch>
           <Route exact path="/" render={() => <Home />} />
           <Route path="/" render={() => <Header />} />
-          </switch>
+          </Switch>
 
 
           {/*main content*/}
-          <switch>
+          <Switch>
           <Route path="/Home" component= {Home} />
           <Route path="/posts" render={() => <Posts />} />
-        </switch>
+        </Switch>
 
         {/*sight*/}
-        <switch>
+        <Switch>
 
           <Route path="/sightings" render={() => <Sightings />} />
           {/* <Route path="/comments" render={() => <Comments />} /> */}
 
-        </switch>
+        </Switch>
         
         
       </div>
