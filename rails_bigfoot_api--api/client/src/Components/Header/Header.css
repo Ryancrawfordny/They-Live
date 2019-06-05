@@ -1,8 +1,15 @@
 header {
-    background-color: black;
-    color: white;
-  }
+  background-color: black;
+}
 
 nav {
-    position: fixed
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: green;
+  font-size: 18px;
 }

@@ -16,14 +16,14 @@ class SightingsController < ApplicationController
      end
       
        def create
-         sighting = Sighting.find params[:sighting_id]
-         sighting.sightings << Sighting.new(sighting_params)
-         render json: { sighting: sighting.sightings.last }
+         @sighting = @Sighting.find params[:sighting_id]
+         @sighting.sightings << @Sighting.new(params)
+         render json: { sighting: @sighting.sightings.last }
        end
     
        def update
-         sighting = Sighting.where(sighting_id: params[:sighting_id], id: params[:id])
-         sighting.update sighting_params
+         @sighting = Sighting.where(sighting_id: params[:sighting_id], id: params[:id])
+         @sighting.update sighting_params
          render json: { sighting: sighting }
        end
     
@@ -31,5 +31,10 @@ class SightingsController < ApplicationController
          sighting = Sighting.where(sighting_id: params[:sighting_id], id: params[:id])
          sighting.destroy(params[:id])
        end
+       private
+
+      #  def sighting_params
+      #    params.require(:sighting).permit(:)
+      #  end
   
   end

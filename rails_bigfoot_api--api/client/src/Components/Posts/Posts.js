@@ -22,9 +22,9 @@ class Posts extends Component {
     this.setState({ apiData, apiDataLoaded: true });
   };
 
-  showPostsOnPage() {
-    return this.state.apiData.map(data => {
-      return <div key={data.post.id}>
+  showPostsOnPage = () => {
+    return this.state.apiData.map((data,index) => {
+      return <div key={index}>
       <h1>{data.post.post}</h1>
       {/* <h1>{data.comments[0].comment}</h1> */}
 
@@ -44,22 +44,30 @@ class Posts extends Component {
   handleSubmitForm = async (e) => {
     e.preventDefault()
 
-    const { post, comment } = this.state;
+    const { post, comment, apiData } = this.state;
 
     let newPost = {
-      post: post
+      post: post,
+      user_id: 1
       // comment: comment
     }
     let newComment = {
       comment: comment
     }
 
-    await createPosts(newPost);
-    // await axios.post("http://localhost:4567/posts", newPost);
+    const resPost = await createPosts(newPost);
+    //  await axios.post("http://localhost:4567/posts", newPost);
       // const posts = await getAllPosts()
       // this.setState({
       //   apiData: posts
       // })
+
+      apiData.push(resPost)
+      console.log("apiData",apiData)
+      await this.setState({
+        apiData
+      })
+
 
   }
 
@@ -74,7 +82,9 @@ class Posts extends Component {
       <div>
       <input className='comment-input' type='text' name='comment' onChange={this.handleTextInput}></input>
       </div>
-      <button className='post-button'>Create Posts</button>
+      <button className='post-button'>Create Post</button>
+      <button className='edit-button'>Edit Post</button>
+      <button className='delete-button'>Delete Post</button>
       </form>
         {this.state.apiDataLoaded ? this.showPostsOnPage() : <p>Lame</p>}
       </div>

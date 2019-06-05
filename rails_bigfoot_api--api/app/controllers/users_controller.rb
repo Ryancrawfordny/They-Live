@@ -15,10 +15,15 @@ class UsersController < ApplicationController
       end
       
       def create
-        user = User.find params[:User_id]
+        @user = User.find params[:User_id]
         User.Users << User.new(user_params)
-        render json: { user: user.users.last }
+        render json: { user: @user.users.last }
       end
     end
+
+
+      #  def user_params
+      #    params.require(:user).permit(:)
+      #  end
   
   end

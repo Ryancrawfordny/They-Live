@@ -21,19 +21,36 @@ class PostsController < ApplicationController
     end
 
        def create
-        post = Post.find params[:post_id]
-        Post.posts << Post.new(post_params)
-        render json: { post: post.posts.last }
+       @post = Post.new(post_params)
+
+        if @post.save
+        render json: {post: @post}, status: :ok
+        else
+          render json: { message: " in creating error" }, status: :internal_server_error
+        end
+      end
+
+      def new
+        @post = Post.new
       end
    
       def update
-        post = Post.where(post_id: params[:post_id], id: params[:id])
-        post.update post_params
-        render json: { post: post }
+        @post = Post.find(params[:id])
+        @post.update post_params
+        render json: { post: @post }
       end
    
        def destroy
-        post = Post.where(post_id: params[:post_id], id: params[:id])
-        post.destroy(params[:id])
+        @post = Post.find(params[:id])
+        @post.destroy()
+        render json: { message: "done" }, status: :ok
+
+        # @post.destroy(params[:id])
+      end
+
+      private
+
+      def post_params
+        params.permit(:post, :user_id)
       end
      end

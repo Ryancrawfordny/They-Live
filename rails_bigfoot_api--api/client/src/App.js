@@ -15,7 +15,7 @@ class App extends Component {
           {/* <Header /> */}
           {/* <Sightings /> */}
 
-          {this.props.children}
+          {/* {this.props.children} */}
         </div>
         {/*Nav*/}
         <Switch>
@@ -34,7 +34,7 @@ class App extends Component {
         <Switch>
 
           <Route path="/sightings" render={() => <Sightings />} />
-          {/* <Route path="/comments" render={() => <Comments />} /> */}
+          <Route path="/comments" render={() => <Comments />} />
 
         </Switch>
         
