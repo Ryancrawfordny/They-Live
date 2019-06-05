@@ -1,7 +1,12 @@
 class PostsController < ApplicationController
     def index
       @posts = Post.all
-      render json: @posts, status: :ok
+      @fullPosts = @posts.map { | post | {
+        post: post,
+        comments: Comment.where(:post_id => post.id)
+      }}
+
+      render json: @fullPosts, status: :ok
     end
   
      def show

@@ -1,0 +1,18 @@
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    height:calc(100% - 100px);
+    width: calc(100% - 100px);
+    margin: 50px;
+    flex:2;
+  }
+  
+  .comment-style {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .content-style {
+    flex: 2;
+    line-height: 2;
+  }
