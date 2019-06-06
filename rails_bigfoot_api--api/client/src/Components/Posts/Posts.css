@@ -22,3 +22,16 @@
   border: 1px solid #888;
   width: 80%;
 }
+
+textarea {
+  width: 60vw;
+  height: 20vh;
+  outline: none;
+}
+
+.comment{
+  text-align:center;
+  border:1px solid black;
+  margin:0 auto;
+  width:50%;
+}

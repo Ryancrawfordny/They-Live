@@ -31,3 +31,18 @@ body {
     justify-content: center;
     font-family: 'IBM Plex Mono', monospace;
   }
+
+  .home-p {
+      width: 75%;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      padding-left: 175px;
+  }
+
+  .photo {
+      max-width: 50;
+      max-height: 50;
+      
+  } 

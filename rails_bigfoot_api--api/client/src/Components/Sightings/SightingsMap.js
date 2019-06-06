@@ -65,20 +65,28 @@ class SightingsMap extends Component {
     const { viewport } = this.state;
 
     return (
-      <ReactMapGL
-        width={viewport.width}
-        height={viewport.height}
-        latitude={viewport.latitude}
-        longitude={viewport.longitude}
-        zoom={viewport.zoom}
-        mapStyle="mapbox://styles/mapbox/light-v8"
-        onViewportChange={viewport => this.setState({ viewport })}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
-      >
-        {sightings && sightings.map(this._renderMarker)}
+      <div className='map-page'>
+        <div className="heading">
+          <h1 className="sightings-h1">Find bigfoot in you area</h1>
+          <img className="photo" src="https://i.imgur.com/90iutch.png" alt="bigfoot"></img>
+        </div>
+        <div className="sightingsMap">
+          <ReactMapGL
+            width={viewport.width}
+            height={viewport.height}
+            latitude={viewport.latitude}
+            longitude={viewport.longitude}
+            zoom={viewport.zoom}
+            mapStyle="mapbox://styles/mapbox/light-v8"
+            onViewportChange={viewport => this.setState({ viewport })}
+            mapboxApiAccessToken={MAPBOX_TOKEN}
+          >
+            {sightings && sightings.map(this._renderMarker)}
 
-        {this.state.popupInfo && this._renderPopup()}
-      </ReactMapGL>
+            {this.state.popupInfo && this._renderPopup()}
+          </ReactMapGL>
+        </div>
+      </div>
     );
   }
 }

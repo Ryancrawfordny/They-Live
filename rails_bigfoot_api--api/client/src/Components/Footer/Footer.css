@@ -1,29 +1,54 @@
-.footer-flex-around {
-    height: 150px;
-    width: 100%;
-    background-color: #f87060;
-    display: flex;
-    justify-content: center;
-    color: #ced6d6;
-    margin-top: 10px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #ced6d6;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-flex-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-left: 90px;
-  }
-  
-  h1 {
-    text-align: center;
-  }
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe");
+
+.main-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:black;
+  color: green;
+  text-align: center;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  border-color: green;
+  border-top-style: solid;
+}
+
+.footer-container {
+  min-height: 20vh;
+}
+
+.finder {
+  text-decoration: none;
+  display: flex;
+  justify-content: right;
+  color: green;
+  font-size: 25px;
+}
+.footer-h1{
+  margin: 0;
+}
+
+.bfro {
+  text-decoration: none;
+  display: flex;
+  justify-content: right;
+  color: green;
+  font-size: 25px;
+}
+
+p {
+  display: flex;
+  justify-content: right;
+  font-size: 15px;
+}
+.footer-resource {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -45,7 +45,7 @@ class PostsController < ApplicationController
         @post.destroy()
         render json: { message: "done" }, status: :ok
 
-        # @post.destroy(params[:id])
+        
       end
 
       private

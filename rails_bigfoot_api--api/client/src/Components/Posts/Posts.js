@@ -57,7 +57,7 @@ class Posts extends Component {
   showPostsOnPage = () => {
     return this.state.apiData.map((data, index) => {
       return (
-        <div key={index}>
+        <div key={index} className="comment">
           <h1>{data.post.post}</h1>
           <button className="edit-button" value={data.post.id} onClick={this.showModal}>
             Edit Post
@@ -85,11 +85,11 @@ class Posts extends Component {
 
   showModal = async (e) => {
     const id = e.target.value
-    const posts = await getPosts(id)
+    // const posts = await getPosts(id)
     this.setState({
       show: true,
       id: id,
-      posts: posts
+      // posts: posts
     })
   }
 
@@ -115,7 +115,7 @@ class Posts extends Component {
 
     apiData.push(resPost);
     console.log("apiData", apiData);
-    await this.setState({
+    this.setState({
       apiData
     });
   };
@@ -124,7 +124,7 @@ class Posts extends Component {
     const modal = (this.state.show) ?
     <div className='modal'>
     <section className='modal-content'>
-    <form onSubmit={e => this.onEditClick(e)}>
+    <form onSubmit={this.onEditClick}>
     <label htmlFor='name'> <input type='text' name='post' onChange={this.onPostFormChange}></input>
     </label>
     <button type='button' onClick={this.hideModal}>Update</button>
@@ -135,7 +135,7 @@ class Posts extends Component {
       <div className="App">
         <form className="post-form" onSubmit={this.handleSubmitForm}>
           <div>
-            <input
+            <textarea
               className="post-input"
               type="text"
               name="post"
