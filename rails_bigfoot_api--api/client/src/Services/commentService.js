@@ -7,27 +7,27 @@ const api = axios.create({
     baseURL: `${URL}`
 })
 
-export const getAllPosts = async() => {
+export const getAllComments = async() => {
     try{
-        const response = await api.get('/posts')
+        const response = await api.get('/comments')
         return response.data
     } catch(e) {
         console.log(e.message)
     }
 }
 
-export const createPosts = async(data) => {
+export const createComments = async(data) => {
     try {
-        const response = await api.post('/posts', data)
+        const response = await api.post('/comments', data)
         return response.data
     } catch(e) {
         console.log(e.message)
     }
 }
 
-export const updatePosts = async(id,data) => {
+export const updateComments = async(id,data) => {
     try {
-        const response = await api.put(`/posts/${id}`, data)
+        const response = await api.put(`/comments/${id}`, data)
         console.log(response.data)
         return response.data
     } catch(e) {
@@ -35,18 +35,18 @@ export const updatePosts = async(id,data) => {
     }
 }
 
-export const deletePosts = async(id) => {
+export const deleteComments = async(id) => {
     try {
-        const response = await api.delete(`/posts/${id}`)
+        const response = await api.delete(`/comments/${id}`)
         return response.data
     } catch(e) {
         console.log(e.message)
     }
 }
 
-export const getPosts = async(id) => {
+export const getComments = async(id) => {
     try {
-        const response = await api.get(`/posts/${id}`)
+        const response = await api.get(`/comments/${id}`)
         return response.data
 
     } catch(e) {

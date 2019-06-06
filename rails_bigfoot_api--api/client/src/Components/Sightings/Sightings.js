@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SightingsMap from "./SightingsMap.js";
-import axios from 'axios'
-
+import axios from "axios";
 
 class Sightings extends Component {
   constructor() {
@@ -19,9 +18,6 @@ class Sightings extends Component {
   };
 
   render() {
-      
-    // const { info } =this.props;
-    // const displayName = `${info.name}`
     return (
       <div>
         <SightingsMap sightings={this.state.apiData} />

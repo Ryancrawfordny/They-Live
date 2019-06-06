@@ -32,6 +32,12 @@ sightings = [
     lat: 34.80405,
     long: -87.50905,
     user_id: 1},
+
+    {report: 420,
+     info: "Sunnyvale resident, Bubbles encounter what he believed to be a god damn Samsquanch",
+     lat: 44.647210,
+     long: -63.537701,
+     user_id: 1},
 ]
 sightings.each do |sighting_data|
     Sighting.create(sighting_data)

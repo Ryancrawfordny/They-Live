@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Sigmar+One');
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+
 
 .home-h1 {
     font-family: 'Sigmar One', cursive;
@@ -7,3 +9,25 @@
     justify-content: center;
     
 }
+
+.home-h3 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 75px;
+    display: flex;
+    justify-content: center;
+
+}
+
+body {
+    background-color: white;
+    color: green;
+}
+
+.display-linebreak {
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+  }

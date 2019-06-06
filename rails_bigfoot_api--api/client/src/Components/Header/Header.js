@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Comments from "../../Components/Comments/Comments";
-// import Home from "./Comments/Home/Home"
 import { Link, Route } from "react-router-dom";
 import './Header.css'
 

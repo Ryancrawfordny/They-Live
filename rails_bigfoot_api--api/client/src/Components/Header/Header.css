@@ -6,10 +6,12 @@ nav {
   padding: 10px;
   display: flex;
   justify-content: space-evenly;
+  padding-bottom: 20px;
 }
 
 .nav-link {
   text-decoration: none;
   color: green;
   font-size: 18px;
+  padding-top: 15px;
 }

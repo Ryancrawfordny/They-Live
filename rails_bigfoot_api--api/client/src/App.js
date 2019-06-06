@@ -6,6 +6,7 @@ import Header from "./Components/Header/Header";
 import Sightings from "./Components/Sightings/Sightings";
 import Comments from "./Components/Comments/Comments";
 import Posts from "./Components/Posts/Posts"
+import Footer from "./Components/Footer/Footer"
 
 class App extends Component {
   render() {
