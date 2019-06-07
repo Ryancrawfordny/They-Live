@@ -67,8 +67,12 @@ class SightingsMap extends Component {
     return (
       <div className='map-page'>
         <div className="heading">
+        <img className="photo" src="https://i.imgur.com/90iutch.png" 
+          alt="bigfoot"></img>
           <h1 className="sightings-h1">Find bigfoot in you area</h1>
-          <img className="photo" src="https://i.imgur.com/90iutch.png" alt="bigfoot"></img>
+         
+          <img className="photo2" src="https://i.imgur.com/90iutch.png" 
+          alt="bigfoot"></img>
         </div>
         <div className="sightingsMap">
           <ReactMapGL

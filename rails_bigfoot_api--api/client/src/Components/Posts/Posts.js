@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Posts.css";
 import axios from "axios";
 import {createPosts,getAllPosts,deletePosts,updatePosts,getPosts} from "../../Services/postService";
+import { isNullOrUndefined } from "util";
 
 class Posts extends Component {
   constructor() {
@@ -11,7 +12,9 @@ class Posts extends Component {
       apiDataLoaded: false,
       post: "",
       comment: "",
-      show: false
+      show: false,
+      editIndex: 0,
+      editedData: null
     };
   }
 
@@ -29,17 +32,21 @@ class Posts extends Component {
     this.setState({apiData: allPosts})
   };
 
-  onEditClick = async (e) => {
+  onEditClick = async () => {
     console.log("hello")
 
-    e.preventDefault()
-    const id = this.state.id
-    let updatedPost = {
-      post: this.state.post
-    }
-    await updatePosts(id, updatedPost);
-    let allPosts = await getAllPosts()
-    this.setState({apiData: allPosts})
+    //e.preventDefault()
+    // const id = this.state.id
+    // let updatedPost = {
+    //   post: this.state.post
+    // }
+    // await updatePosts(id, updatedPost);
+    const { editedData } = this.state;
+   
+    console.log(editedData)
+    const resPost = await updatePosts(editedData.post.id,editedData.post);
+    // let allPosts = await getAllPosts()
+    // this.setState({apiData: allPosts})
     this.hideModal()
   }
 
@@ -53,13 +60,27 @@ class Posts extends Component {
 
     this.setState(newState);
   }
+  onEditFormChange = (e) => {
+    const element = e.target
+    const name = element.name
+    let value = element.value
+    const {editedData, apiData, editIndex} = this.state
+    editedData.post[name] = value
+    apiData[editIndex] = {...editedData}
+
+
+    this.setState({
+      apiData,
+      editedData: {...editedData}
+    });
+  }
 
   showPostsOnPage = () => {
     return this.state.apiData.map((data, index) => {
       return (
         <div key={index} className="comment">
-          <h1>{data.post.post}</h1>
-          <button className="edit-button" value={data.post.id} onClick={this.showModal}>
+          <p>{data.post.post}</p>
+          <button className="edit-button" value={data.post.id} onClick={(e) => this.showModal(e,index)}>
             Edit Post
           </button>
           <button
@@ -83,18 +104,24 @@ class Posts extends Component {
     });
   };
 
-  showModal = async (e) => {
+  showModal = async (e, editIndex) => {
     const id = e.target.value
-    // const posts = await getPosts(id)
-    this.setState({
+    console.log("index", editIndex)
+    const editedData = this.state.apiData[editIndex]
+    await this.setState({
       show: true,
       id: id,
-      // posts: posts
+      editIndex,
+      editedData, 
+      
     })
   }
 
-  hideModal = () => {
-    this.setState({
+  hideModal = async(e) => {
+    //e.preventDefault();
+
+    await this.onEditClick()
+    await this.setState({
       show: false
     })
   }
@@ -120,17 +147,35 @@ class Posts extends Component {
     });
   };
 
+  handleEditSubmitForm = async e => {
+    e.preventDefault();
+    const { editedData } = this.state;
+   
+
+    const resPost = await updatePosts(editedData.post.id,editedData.post);
+
+    console.log("resPost", resPost);
+  
+  };
+
   render() {
+    const {editedData} = this.state
+   
+    console.log(editedData)
+
     const modal = (this.state.show) ?
     <div className='modal'>
     <section className='modal-content'>
     <form onSubmit={this.onEditClick}>
-    <label htmlFor='name'> <input type='text' name='post' onChange={this.onPostFormChange}></input>
+    <label htmlFor='name'> 
+      <input type='text' name='post' value={editedData.post.post} onChange={this.onEditFormChange}></input>
     </label>
     <button type='button' onClick={this.hideModal}>Update</button>
     </form>
     </section>
     </div> :null;
+
+
     return (
       <div className="App">
         <form className="post-form" onSubmit={this.handleSubmitForm}>

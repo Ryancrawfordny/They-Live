@@ -8,10 +8,16 @@
 }
 
 .photo {
-  width: 50px;
-  height:50px;
+  width: 100px;
+  height:100px;
   display: flex;
   justify-content: right;
+}
+.photo2 {
+  width: 100px;
+  height:100px;
+  display: flex;
+  justify-content: left;
 }
 
 .sightingsMap {
