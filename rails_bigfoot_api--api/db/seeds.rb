@@ -34,10 +34,40 @@ sightings = [
     user_id: 1},
 
     {report: 420,
-     info: "Sunnyvale resident, Bubbles encounter what he believed to be a god damn Samsquanch",
+     info: "Sunnyvale resident, Bubbles encountered what he believed to be a god damn Samsquanch",
      lat: 44.647210,
      long: -63.537701,
      user_id: 1},
+
+    {report: 1356,
+        info: "Husband and wife observe sasquatch at river's edge",
+        lat: 38.655,
+        long: -90.675,
+        user_id: 1},
+
+    {report: 3332,
+        info: "Motorist slams on his brakes when a 4-5' brown shaggy creature steps in front of his car near Hendersonville",
+        lat: 35.33975,
+        long: -82.443,
+        user_id: 1},
+    
+    {report: 3293,
+        info: "Three fox hunters witness a `Freak of nature bear` step over a fence and walk into a thicket.",
+        lat: 40.4764,
+        long: -82.80257 ,
+        user_id: 1},
+
+    {report: 8083,
+        info: "Boy encounters bigfoot while fishing on a pond just north of Detroit",
+        lat: 33.66666,
+        long: -95.27361,
+        user_id: 1},
+
+    {report: 24052,
+        info: " Man recounts boyhood experience of hearing a terrifying scream while hunting near the San Pedro River",
+        lat: 31.63,
+        long: -110.177,
+        user_id: 1},
 ]
 sightings.each do |sighting_data|
     Sighting.create(sighting_data)

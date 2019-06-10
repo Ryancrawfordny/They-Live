@@ -78,8 +78,10 @@ class Posts extends Component {
   showPostsOnPage = () => {
     return this.state.apiData.map((data, index) => {
       return (
+        
+        
         <div key={index} className="comment">
-          <p>{data.post.post}</p>
+        <p>{data.post.post}</p>
           <button className="edit-button" value={data.post.id} onClick={(e) => this.showModal(e,index)}>
             Edit Post
           </button>
@@ -91,6 +93,7 @@ class Posts extends Component {
             Delete Post
           </button>
         </div>
+        
       );
     });
   };
@@ -160,9 +163,6 @@ class Posts extends Component {
 
   render() {
     const {editedData} = this.state
-   
-    console.log(editedData)
-
     const modal = (this.state.show) ?
     <div className='modal'>
     <section className='modal-content'>
@@ -170,7 +170,7 @@ class Posts extends Component {
     <label htmlFor='name'> 
       <input type='text' name='post' value={editedData.post.post} onChange={this.onEditFormChange}></input>
     </label>
-    <button type='button' onClick={this.hideModal}>Update</button>
+    <button type='submit' onClick={this.hideModal}>Update</button>
     </form>
     </section>
     </div> :null;
@@ -178,6 +178,7 @@ class Posts extends Component {
 
     return (
       <div className="App">
+      <h1 className='post-h1'>Tell Us About Your Encounter</h1>
         <form className="post-form" onSubmit={this.handleSubmitForm}>
           <div>
             <textarea
