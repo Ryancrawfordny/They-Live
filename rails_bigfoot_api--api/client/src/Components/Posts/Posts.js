@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Posts.css";
 import axios from "axios";
 import {createPosts,getAllPosts,deletePosts,updatePosts,getPosts} from "../../Services/postService";
-import { isNullOrUndefined } from "util";
+
 
 class Posts extends Component {
   constructor() {
